@@ -35,13 +35,31 @@ $faq = [
  <html lang="en" dir="ltr">
    <head>
      <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto:wght@300&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
      <title>Google-faq</title>
    </head>
    <body>
+
+     <header>
+       <div class="header-top">
+         <div id="logo"></div>
+         <h2>Privacy e termini</h2>
+
+       </div>
+       <div class="header-bottom">
+         <ul>
+           <li>Introduzione</li>
+           <li>Norme sulla privacy</li>
+           <li>Termini di servizio</li>
+           <li>Tecnologie</li>
+           <li>Domande frequenti</li>
+         </ul>
+       </div>
+     </header>
+
      <div class="container">
-       
+       <!-- Lista FAQ -->
        <ul>
          <?php foreach ($faq as $domande => $faqq): ?>
            <li>
@@ -49,7 +67,6 @@ $faq = [
              <p> <?php echo $faqq["answer"]; ?></p>
            </li>
          <?php endforeach; ?>
-
        </ul>
 
      </div>
