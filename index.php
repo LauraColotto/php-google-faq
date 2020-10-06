@@ -21,9 +21,11 @@ $faq = [
 
       Puoi leggere ulteriori informazioni sulla sicurezza online, incluso come proteggere te e la tua famiglia online, nel Centro Google per la sicurezza online.
 
-      Scopri quali misure adottiamo per garantire protezione e sicurezza alle tue informazioni personali, lasciando a te il controllo.
-
-      Come faccio a rimuovere informazioni su di me dai risultati di ricerca di Google?"
+      Scopri quali misure adottiamo per garantire protezione e sicurezza alle tue informazioni personali, lasciando a te il controllo."
+    ],
+  "q&a_3" => [
+    "quest" => "Come faccio a rimuovere informazioni su di me dai risultati di ricerca di Google?",
+    "answer" => "I risultati di ricerca di Google rispecchiano i contenuti pubblicamente disponibili sul Web. I motori di ricerca non possono rimuovere i contenuti direttamente dai siti web, quindi rimuovere risultati di ricerca da Google non consente di rimuovere i contenuti dal Web. Se desideri rimuovere qualcosa dal Web, devi contattare il webmaster del sito su cui sono pubblicati i contenuti e chiedergli di apportare una modifica. Inoltre, se, ai sensi delle leggi europee per la protezione dei dati, desideri richiedere la rimozione di determinate informazioni su di te visualizzate nei risultati di ricerca di Google, fai clic qui. Una volta che i contenuti saranno stati rimossi e che Google avrà rilevato l'aggiornamento, le informazioni non verranno più visualizzate nei risultati di ricerca di Google. In caso di una richiesta di rimozione urgente, è inoltre possibile visitare la nostra pagina di assistenza per avere ulteriori informazioni."
     ],
 ];
 
@@ -33,15 +35,26 @@ $faq = [
  <html lang="en" dir="ltr">
    <head>
      <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
      <title>Google-faq</title>
    </head>
    <body>
-     <?php foreach ($faq as $domande => $faqq): ?>
-       <li>
-         <h2> <?php echo $faqq["quest"]; ?> </h2>
-         <p> <?php echo $faqq["answer"]; ?></p>
-       </li>
-     <?php endforeach; ?>
+     <div class="container">
+       
+       <ul>
+         <?php foreach ($faq as $domande => $faqq): ?>
+           <li>
+             <h2> <?php echo $faqq["quest"]; ?> </h2>
+             <p> <?php echo $faqq["answer"]; ?></p>
+           </li>
+         <?php endforeach; ?>
+
+       </ul>
+
+     </div>
+
+
 
    </body>
  </html>
